@@ -1,0 +1,20 @@
+/* layout.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.hero {
+  background-color: #00ecb9;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.posts article {
+  background: #fff;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
