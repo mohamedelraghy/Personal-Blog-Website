@@ -9,9 +9,9 @@
   </head>
   <body>
     <header>
-      <h1>My Personal Blog</h1>
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <div class="logo"><a href="index.html">My Personal Blog</a></div>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="blog-post.html">Blog</a></li>
@@ -25,27 +25,36 @@
     </section>
 
     <section class="posts">
-      <article>
-        <h3>Post Title 1</h3>
-        <p>
-          A short description of the blog post content.
-          <a href="blog-post.html">Read more...</a>
-        </p>
-      </article>
-      <article>
-        <h3>Post Title 2</h3>
-        <p>
-          A short description of the blog post content.
-          <a href="blog-post.html">Read more...</a>
-        </p>
-      </article>
+      <h2>Recent Blog Posts</h2>
+      <div class="post-card">
+        <img src="assets/images/post1.jpg" alt="Post Image" />
+        <div class="post-content">
+          <h3><a href="blog-post.html">Post Title 1</a></h3>
+          <p class="excerpt">A short description of the blog post content...</p>
+          <a href="blog-post.html" class="btn">Read More</a>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <img src="assets/images/post1.jpg" alt="Post Image" />
+        <div class="post-content">
+          <h3><a href="blog-post.html">Post Title 2</a></h3>
+          <p class="excerpt">A short description of the blog post content...</p>
+          <a href="blog-post.html" class="btn">Read More</a>
+        </div>
+      </div>
+      <!-- Repeat .post-card for more posts -->
     </section>
 
     <footer>
-      <p>
-        Connect with me on <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
-      </p>
-      <p>&copy; 2024 My Personal Blog</p>
+      <div class="footer-content">
+        <p>&copy; 2024 My Personal Blog</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-icon">Facebook</a>
+          <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

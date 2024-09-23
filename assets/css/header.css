@@ -6,21 +6,67 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1em 2em;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
+.logo a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ecb9; /* Primary color on hover */
+}
+
+h1 {
+  font-family: "Georgia", serif; /* Unique font */
+  font-size: 3em; /* Large size */
+  color: #00ecb9; /* Primary color */
+  text-transform: uppercase; /* All caps for emphasis */
+}
+
+h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 2.5em;
+  color: #333; /* Dark gray for contrast */
+  letter-spacing: 2px; /* Increase spacing between letters */
+}
+
+h3 {
+  font-family: "Verdana", sans-serif;
+  font-size: 2em;
+  color: #ff6347; /* Tomato color for a pop of brightness */
+  text-shadow: 1px 1px #666; /* Adds shadow effect */
+}
+
+a {
+  color: #ff6347; /* Tomato color */
+  text-decoration: none; /* Remove underline by default */
+  font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #00ecb9; /* Change color on hover */
 }
