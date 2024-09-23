@@ -1,5 +1,8 @@
 /* Blog Post Card Styles */
 .posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
   padding: 2em;
   background-color: #fff;
 }
@@ -12,8 +15,8 @@
 
 .post-card {
   display: flex;
+  flex-direction: column;
   background-color: #f9f9f9;
-  margin-bottom: 1.5em;
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
