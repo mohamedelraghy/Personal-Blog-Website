@@ -5,28 +5,51 @@
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   padding: 3em;
-  background-color: #00ecb9; /* Adjust this to match your theme */
+  height: 60vh; /* Take 60% of the viewport height */
   text-align: center;
-  min-height: 60vh; /* Make the hero section take 60% of the viewport height */
+  color: white;
+  position: relative;
+  background-image: url("../images/hero.jpg"); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Ensure it stays behind the text */
+}
+
+.hero h1,
+.hero p {
+  z-index: 2; /* Ensure the text is above the overlay */
 }
 
 .hero h1 {
   font-size: 2.5em;
-  color: #fff;
   margin-bottom: 0.5em;
 }
 
 .hero p {
   font-size: 1.2em;
-  color: #f5f5f5;
-  margin-bottom: 1em;
 }
 
-.hero img {
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px; /* Control the size of the image */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add some depth to the image */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: -1; /* Ensure it stays behind the text */
 }
 
 /* Blog Post Card Styles */
@@ -58,7 +81,8 @@
 }
 
 .post-card img {
-  width: 200px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
