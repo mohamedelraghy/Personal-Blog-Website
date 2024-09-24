@@ -97,6 +97,7 @@
   color: #00ecb9;
   text-decoration: none;
   transition: color 0.3s;
+  grid-column: 1 / 2; /* Main content column */
 }
 
 .post-content h3 a:hover {
@@ -125,8 +126,11 @@
   transform: scale(1.05);
 }
 
-/* Blog Post Page Styles */
+/* Blog Post Content Section */
 .blog-post {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Main content + Sidebar */
+  gap: 2em;
   padding: 2em;
   background-color: #fff;
 }
@@ -134,17 +138,35 @@
 .blog-post h2 {
   color: #333;
   margin-bottom: 0.5em;
+  grid-column: 1 / -1; /*Spans both columns*/
 }
 
 .blog-post .date {
   color: #666;
   margin-bottom: 1.5em;
+  grid-column: 1 / -1;
 }
 
 .post-content p {
   margin-bottom: 1em;
   line-height: 1.6;
   color: #333;
+}
+
+.blog-post h2 {
+  color: #333;
+  margin-bottom: 0.5em;
+  grid-column: 1 / -1; /* Spans both columns */
+}
+
+.blog-post .date {
+  color: #666;
+  margin-bottom: 1.5em;
+  grid-column: 1 / -1;
+}
+
+.post-content {
+  grid-column: 1 / 2; /* Main content column */
 }
 
 /* Author Info Styles */
@@ -154,8 +176,8 @@
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid #ddd;
+  grid-column: 1 / -1; /* Spans both columns */
 }
-
 .avatar {
   width: 80px;
   height: 80px;
@@ -203,6 +225,7 @@ figure {
   display: block;
   text-align: center;
   margin: 1em 0;
+  grid-column: 1 / -1; /* Spans both columns */
 }
 
 figcaption {
@@ -218,4 +241,5 @@ blockquote {
   background-color: #f9f9f9;
   border-left: 5px solid #00ecb9; /* Your primary color */
   color: #666;
+  grid-column: 1 / -1; /* Spans both columns */
 }
