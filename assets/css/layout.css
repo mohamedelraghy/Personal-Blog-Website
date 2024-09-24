@@ -97,7 +97,7 @@
   color: #00ecb9;
   text-decoration: none;
   transition: color 0.3s;
-  grid-column: 1 / 2; /* Main content column */
+  grid-area: content;
 }
 
 .post-content h3 a:hover {
@@ -130,6 +130,13 @@
 .blog-post {
   display: grid;
   grid-template-columns: 1fr 300px; /* Main content + Sidebar */
+  grid-template-rows: auto; /* Automatic rows based on content */
+  grid-template-areas:
+    "title title"
+    "date date"
+    "content sidebar"
+    "author sidebar"
+    "sharing sidebar";
   gap: 2em;
   padding: 2em;
   background-color: #fff;
@@ -138,13 +145,13 @@
 .blog-post h2 {
   color: #333;
   margin-bottom: 0.5em;
-  grid-column: 1 / -1; /*Spans both columns*/
+  grid-area: title;
 }
 
 .blog-post .date {
   color: #666;
   margin-bottom: 1.5em;
-  grid-column: 1 / -1;
+  grid-area: date;
 }
 
 .post-content p {
@@ -176,7 +183,7 @@
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid #ddd;
-  grid-column: 1 / -1; /* Spans both columns */
+  grid-area: author;
 }
 .avatar {
   width: 80px;
@@ -203,6 +210,7 @@
 /* Social Sharing Styles */
 .social-sharing {
   margin-top: 2em;
+  grid-area: sharing;
 }
 
 .social-sharing h4 {
@@ -241,5 +249,62 @@ blockquote {
   background-color: #f9f9f9;
   border-left: 5px solid #00ecb9; /* Your primary color */
   color: #666;
-  grid-column: 1 / -1; /* Spans both columns */
+  grid-area: content;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.5em;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #317465;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #ff6347;
+}
+
+/* Newsletter Subscription Form */
+.newsletter input[type="email"] {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.newsletter button {
+  background-color: #ff6347;
+  color: white;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #00ecb9;
 }
