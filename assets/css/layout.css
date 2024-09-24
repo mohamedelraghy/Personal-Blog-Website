@@ -198,3 +198,24 @@
 .social-sharing .social-icon:hover {
   color: #00ecb9;
 }
+
+figure {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5em 10px;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border-left: 5px solid #00ecb9; /* Your primary color */
+  color: #666;
+}
