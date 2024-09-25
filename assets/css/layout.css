@@ -129,19 +129,18 @@
 /* Blog Post Content Section */
 .blog-post {
   display: grid;
-  grid-template-columns: 1fr 300px; /* Main content + Sidebar */
+  grid-template-columns: 1fr; /* Ensure single column layout */
   grid-template-rows: auto; /* Automatic rows based on content */
   grid-template-areas:
-    "title title"
-    "date date"
-    "content sidebar"
-    "author sidebar"
-    "sharing sidebar";
+    "title"
+    "date"
+    "content"
+    "author"
+    "sharing";
   gap: 2em;
   padding: 2em;
   background-color: #fff;
 }
-
 .blog-post h2 {
   color: #333;
   margin-bottom: 0.5em;
@@ -252,40 +251,6 @@ blockquote {
   grid-area: content;
 }
 
-/* Sidebar Styles */
-.sidebar {
-  grid-area: sidebar;
-  background-color: #f9f9f9;
-  padding: 1.5em;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h3 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-  color: #333;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 0.5em;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #317465;
-  transition: color 0.3s;
-}
-
-.sidebar ul li a:hover {
-  color: #ff6347;
-}
-
 /* Newsletter Subscription Form */
 .newsletter input[type="email"] {
   width: 100%;
@@ -307,4 +272,105 @@ blockquote {
 
 .newsletter button:hover {
   background-color: #00ecb9;
+}
+
+/* Media Queries */
+
+/* Mobile Styles (max-width: 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 2em;
+    height: 50vh; /* Reduced height for mobile */
+  }
+
+  .hero h1 {
+    font-size: 2em; /* Smaller font size for headings */
+  }
+
+  .hero p {
+    font-size: 1em; /* Smaller font size for paragraphs */
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .blog-post {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .blog-post h2 {
+    font-size: 1.5em; /* Smaller heading for blog post */
+  }
+
+  .blog-post .date {
+    font-size: 0.9em; /* Smaller date font */
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  .newsletter input[type="email"],
+  .newsletter button {
+    font-size: 0.9em; /* Smaller font size for newsletter inputs */
+  }
+}
+
+/* Tablet Styles (min-width: 601px and max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    height: 60vh; /* Height remains the same for tablets */
+  }
+
+  .hero h1 {
+    font-size: 2.2em; /* Adjusted heading size for tablets */
+  }
+
+  .hero p {
+    font-size: 1.1em; /* Adjusted paragraph size for tablets */
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  .blog-post {
+    grid-template-columns: 1fr 250px; /* Main content + sidebar on tablets */
+  }
+
+  .sidebar {
+    display: block; /* Show sidebar on tablets */
+  }
+
+  .sidebar h3 {
+    font-size: 1.3em; /* Adjust sidebar heading size */
+  }
+}
+
+/* Desktop Styles (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .hero {
+    height: 70vh; /* Increased height for desktop */
+  }
+
+  .hero h1 {
+    font-size: 3em; /* Larger heading for desktop */
+  }
+
+  .hero p {
+    font-size: 1.3em; /* Larger paragraph size for desktop */
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+  }
+
+  .blog-post {
+    grid-template-columns: 1fr 300px; /* Main content + sidebar for desktop */
+  }
+
+  .sidebar h3 {
+    font-size: 1.5em; /* Larger sidebar heading size */
+  }
 }
